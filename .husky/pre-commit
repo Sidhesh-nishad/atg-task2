@@ -1,0 +1,22 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Exit if in CI environment exit
+    [ -n "$CI" ] && exit 0
+
+# Clear the terminal logs
+clear;
+
+echo "\n⌛⌛ Initiating project checks before committing... ⌛⌛"
+
+# Checking Typescript's type standards
+    echo "\n🕛 Initiating type checks ... 🕛\n"
+        pnpm run check:types ||
+        (
+            echo "\n❌ Typescript type check failed. Fix them manually and try commit again. ❌\n";
+            false;
+        )
+    echo "\n✅ Typescript type check passed successfully. ✅\n"
+
+# If everything passes... Now we can commit
+    echo "\n✅✅✅✅ All checks and tests are passed. Commiting to version control now... ✅✅✅✅\n"npx commitlint --edit $1

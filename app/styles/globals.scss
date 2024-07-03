@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@mixin scroll() {
+	@apply overflow-x-hidden overflow-y-auto;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		@apply w-1 my-1;
+	}
+
+	&::-webkit-scrollbar-track {
+		@apply my-0.5 bg-[#F3F3F3];
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply my-1 rounded-full bg-primary;
+	}
+};
+
+@layer base {
+	input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+		-moz-appearance: textfield;
+	}
+
+	.scrollbar {
+		@include scroll();
+	}
+
+	.scrollbar-both {
+		@include scroll();
+		@apply overflow-x-auto overflow-y-auto;
+
+		&::-webkit-scrollbar {
+			@apply w-1.5;
+		}
+
+		&::-webkit-scrollbar:horizontal {
+			@apply h-2 m-0;
+		}
+
+		&::-webkit-scrollbar-track:horizontal {
+			@apply m-0;
+		}
+
+		&::-webkit-scrollbar-thumb:horizontal {
+			@apply m-0;
+		}
+	}
+
+	.scrollbar-horizontal {
+		@include scroll();
+		@apply overflow-y-hidden overflow-x-auto;
+		scroll-behavior: smooth;
+
+		&::-webkit-scrollbar:horizontal {
+			@apply h-1.5;
+			@apply bg-[#F3F3F3];
+		}
+
+		&::-webkit-scrollbar-thumb {
+			@apply rounded-full bg-primary;
+		}
+	}
+
+	.scrollbar-xs {
+		@include scroll();
+
+		&::-webkit-scrollbar {
+			@apply w-[2px];
+		}
+	}
+
+	.scrollbar-sm {
+		@include scroll();
+
+		&::-webkit-scrollbar {
+			@apply w-[3px];
+		}
+	}
+
+	.scrollbar-md {
+		@include scroll();
+
+		&::-webkit-scrollbar {
+			@apply w-1.5;
+		}
+	}
+
+	.scrollbar-lg {
+		@include scroll();
+
+		&::-webkit-scrollbar {
+			@apply w-2;
+		}
+	}
+
+	.test-red {
+		@apply border-2 border-red-600 border-solid;
+	}
+
+	.test-blue {
+		@apply border-2 border-blue-600 border-solid;
+	}
+
+	.test-green {
+		@apply border-2 border-green-600 border-solid;
+	}
+}

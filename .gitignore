@@ -1,0 +1,72 @@
+# dependencies
+/node_modules
+*node_modules
+*docs
+*dist
+/.pnp
+.pnp.js
+
+# production
+/build
+dist
+*dist
+*.dist
+tmp
+temp
+/out-tsc
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local env files
+.env
+.env*.local
+
+# IDEs and editors
+*.fleet
+/.idea
+.project
+.classpath
+.c9/
+*.cspell
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/logs.txt
+*logs.txt
+notes.txt
+
+# System Files
+.DS_Store
+Thumbs.db
+*.pem
+
+# others
+.github
+note.txt
+*.Identifier
+
+# Todos
+todo.txt
+
+# Next.js
+.next
+
+# Sentry Config File
+.sentryclirc
+*sentry.properties
+
+# Nest JS
+documentation
+certificates

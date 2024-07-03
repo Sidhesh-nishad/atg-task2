@@ -1,0 +1,85 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"skipLibCheck": true,
+		"strict": true,
+		"alwaysStrict": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noUnusedLocals": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"allowJs": true,
+		"checkJs": false,
+		"baseUrl": ".",
+		"removeComments": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@app/*": ["app/*"],
+			"@root/*": ["app/(routes)/(root)/*"],
+
+			"@hooks/*": ["app/hooks/*"],
+			"@icons/*": ["app/icons/*"],
+			"@flowX/*": ["app/flowX/*"],
+			"@styles/*": ["app/styles/*"],
+			"@config/*": ["app/config/*"],
+			"@enums": ["app/config/enums.ts"],
+			"@utlis": ["app/config/utlis.ts"],
+			"@types": ["app/index.types.d.ts"],
+			"@labels": ["app/config/labels.ts"],
+			"@middlewares/*": ["./middlewares/*"],
+			"@routes": ["app/config/routes.ts"],
+			"@clientEnv": ["app/env/client.mjs"],
+			"@serverEnv": ["app/env/server.mjs"],
+
+			/** Components */
+			"@drawer/*": ["app/components/drawer/*"],
+			"@header/*": ["app/components/header/*"],
+			"@dialog/*": ["app/components/dialog/*"],
+			"@chatbot/*": ["app/components/chatbot/*"],
+			"@loaders/*": ["app/components/loaders/*"],
+			"@portals/*": ["app/components/portals/*"],
+			"@pagination/*": ["app/components/pagination/*"],
+			"@baseLayout/*": ["app/components/base-layout/*"],
+			"@authLayout/*": ["app/components/auth-layout/*"],
+			"@statusText/*": ["app/components/status-text/*"],
+			"@chatbotChat/*": ["app/components/chatbot/chat/*"],
+			"@authWrapper/*": ["app/components/auth-wrapper/*"],
+			"@clipLoader": ["app/components/loaders/index.tsx/*"],
+
+			/** Pages */
+			"@login/*": ["app/(auth)/login/*"],
+
+			/** Apis */
+			"@apis/*": ["app/apis/*"],
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"next-env.d.ts",
+		".next/types/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		".next/types/**/*.ts"
+	]
+}
